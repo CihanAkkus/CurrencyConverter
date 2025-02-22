@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let width = view.frame.size.width
-        let height = view.frame.size.height
+        //let height = view.frame.size.height
         
         titleLabel.text = "Currency Converter"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 22)
@@ -101,7 +101,6 @@ class ViewController: UIViewController {
                             if let rates = jsonResponse["rates"] as? Dictionary<String,Any>{
                                 
                                 if let cad = rates["CAD"] as? Double{
-                                    
                                     self.CADLabel.text = "CAD: \(cad)"
                                 }
                                 if let chf = rates["CHF"] as? Double{
